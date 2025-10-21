@@ -1,4 +1,6 @@
-DAY 1 : HASHMAPS 
+**DAY 1 : HASHMAPS**
+
+main pattern is "HashMap / Object (same pattern as Two Sum: "have I seen this value before?"
 pattern for hashmap : 
 count frequency, commonly used in character counting 
 if [1,1,2,2,3,3,4,2,4] then using hashmap 
@@ -8,7 +10,8 @@ loop into given arr
 hashMap[item] = (hasmap[item] || 0) + 1 
 by this we can count character easily
 
-
+--------------------------------------
+**PROBLEM 1 leetcode  ->  2 SUM**
 for 2 sum 
 if we have nums = [2, 7, 11, 15], target = 9
 here 2 and 7 are the numbers and their indexs are
@@ -19,10 +22,8 @@ for (i=0;i<nums.length;i++)
         nums[i]+nums[j] === target
 
 but this time complexity is 2 loops that males ot a O(n2)
---------------------------------------
 
-2 SUM
-MAIN SOLUTION !!!
+MAIN SOLUTION !!! with time complexity of single loop O(n)
 using hasmap
 [2, 7, 11, 15] target = 9
 
@@ -61,5 +62,23 @@ Signal Words: "pair", "duplicate", "target"
 Examples: Two Sum #1, Contains Duplicate #217  
 Complexity: O(n)
 
+**PROBLEM 217 leetcode -> Contains duplicate**
+i have an array of
+[1,2,3,1]
+
+i will create a map {}
+i will loop thru my nums array
+at 0 il check if my nums[i] i.e 1 is in my map {}
+no
+i will store it 
+numsMap[1] = true;  => {1: true}
+
+same goes till last element 1
+i will check if i have 1 in my numsMap
+1 in {1: true, 2: true, 3: true}
+1 is present so return true !!
+
+for finding duplicates and check duplicates we can use ne Set() in this case as well as it removes the duplicates
 
 =================================================================================>
+DAY 2
