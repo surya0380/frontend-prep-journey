@@ -3,7 +3,7 @@
 main pattern is "HashMap / Object (same pattern as Two Sum: "have I seen this value before?"
 pattern for hashmap : 
 count frequency, commonly used in character counting 
-if [1,1,2,2,3,3,4,2,4] then using hashmap 
+if [1,1,2,2,3,3,4,2,4] then using hashmap iterate through elements
 
 hasMap = {} 
 loop into given arr
@@ -16,12 +16,12 @@ for 2 sum
 if we have nums = [2, 7, 11, 15], target = 9
 here 2 and 7 are the numbers and their indexs are
 [0, 1]
-case 1: we can do a 
+case 1: we can do a brute force
 for (i=0;i<nums.length;i++)
     for (j=1;j<nums.length;j++)
         nums[i]+nums[j] === target
-
-but this time complexity is 2 loops that males ot a O(n2)
+        retrun [i, j]
+works but this time complexity is 2 loops that makes it a n*n O(n2)
 
 MAIN SOLUTION !!! with time complexity of single loop O(n)
 using hasmap
@@ -29,14 +29,14 @@ using hasmap
 
 numsMap = {};
 
-1st case loop os at 2
+1st case loop is at 2
 for loop :
     const res = target - nums[i];
     ex:
      res = 9 - 2 = 7
 
      if(res // 7 is in numsMap//{})?
-        
+        -no
     
     numsMap[nums[i]//2] = i//0
 
@@ -50,7 +50,7 @@ ex
 
     if(res // 2 is in numsMap//{2:0})? 
     YES!
-    return [numsMap[compliment],i]
+    return [numsMap[res],i] // [0, 1]
 
 
 or else return []
