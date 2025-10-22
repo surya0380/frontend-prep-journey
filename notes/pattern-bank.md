@@ -51,7 +51,7 @@ ex
     if(res // 2 is in numsMap//{2:0})? 
     YES!
     return [numsMap[res],i] // [0, 1]
-
+             [index, index]
 
 or else return []
 
